@@ -1,0 +1,74 @@
+#this is a game that I made and I also had some help with others
+#im actually satisfied that I made this even tho I was certain that  this will fail
+#Made by mohamed 
+
+
+
+def function(Name):
+    def characterZ():
+        strength = 560
+        endurance = 1200
+        speed = 230
+        Name[0] = [strength, speed, endurance]
+        for Goku in Name[0]:
+            print("YOU HAVE FOUND 'Goku'")
+            break
+        return function(["Goku", "vegeta", "piccolo", "???"])
+    def CharacterS():
+        strength = 430
+        speed = 220
+        endurance = 980
+        Name[1] = [strength, speed, endurance]
+        for Vegeta in Name[1]:
+            print("YOU HAVE FOUND 'Vegeta'")
+            break
+        return function(["Goku", "vegeta", "piccolo", "???"])
+    def characterF():
+        strength = 230
+        speed = 144
+        endurance = 950
+        Name[2] = [strength, speed, endurance]
+        for piccolo in Name[2]:
+            print("YOU HAVE FOUND 'Piccolo'")
+            break
+        return function(["Goku", "vegeta", "piccolo", "???"])
+    def special_character():
+        strength = 9000**2
+        speed = 12000**2
+        endurance = 90000**2
+        Name[3] = [strength, speed, endurance]
+        for beerus in Name[3]:
+            print("CONGRATS YOU HAVE FOUND 'Beerus'")
+            break
+        return function(["Goku", "vegeta", "piccolo", "???"])
+    strength = int(input("write the character's strength  "))
+    endurance = int(input("write the character's endurance  "))
+    speed = int(input("write the character's speed  "))
+    help1 = []
+    help1.insert(0, strength)
+    help1.insert(1, endurance)
+    help1.insert(2, speed)
+    if help1 == [560, 230, 1200]:
+        characterZ()
+    if help1 == [430, 220, 980]:
+        CharacterS()
+    if help1 == [230, 144, 950]:
+        characterF()
+    if help1 == [81000000, 144000000, 8100000000]:
+        special_character()
+        
+    else:
+        print("YOU HAVE FOUND 'None'")
+        return function(["Goku", "vegeta", "piccolo", "???"])
+def Returning():
+    return 0
+    
+search_engine = input("Write 'Anime' to start the engine  ")
+if search_engine.isdigit() == True:
+    Returning()
+
+if search_engine == "Anime":
+    A = function(["Goku", "vegeta", "piccolo", "???"])
+else:
+    print("The game engine has declined your access request")
+    Returning()
