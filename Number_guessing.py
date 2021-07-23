@@ -9,25 +9,27 @@ while True:
 		if x > 50:
 		  	 print(x)
 		  	 print("its larger than then 50")
+		  	 break
+		  	 continue
 		elif x < 50:
 		   print("its smaller than 50")
-		try:
-			question_n = int(input("guess the number"))
-		except:
+		   break
+		   continue
+	try:
+		question_n = int(input("guess the number"))
+	except:
 			print("you have written a non-digit please try again")
 			break
-		for y in Fall:
-					if x != question_n:
+	if x != question_n:
 						print("incorrect")
 						print(question_n, "does not equal ", x)
 						break
 						continue
-					else:
+	else:
 						print("correct")
 						print(question_n, "does equal to", x)
-		quest1 = input("wanna play again? (y/n)")
-		if quest1.lower() != "yes":
+	quest1 = input("wanna play again? (y/n)")
+	if quest1.lower() != "yes":
 			print(None)
-		else:
-			break
-	
+	else:
+		break
